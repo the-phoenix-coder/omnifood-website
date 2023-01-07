@@ -21,11 +21,6 @@
 }
 ::-webkit-scrollbar-thumb {
     background-color: var(--accent-light);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 body,
 html {
@@ -87,6 +82,11 @@ button[data-type='invert']:hover {
 button svg {
     width: 20px;
     height: 20px;
+}
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Utility Classes */
 .num {
@@ -344,9 +344,6 @@ section.fetured-companies .even-column img {
     text-align: center;
 }
 .how-box .box-photo .img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     max-width: 50%;
     margin: auto;
@@ -587,16 +584,18 @@ section.fetured-companies .even-column img {
     -ms-border-radius: .6rem;
     -o-border-radius: .6rem;
 }
-#price .box:last-child {
+/* #price .box:last-child {
     background-color: var(--accent-lighter);
-}
+} */
 #price .box > * {
     margin-block: 1rem;
 }
-#price .box h4 {
+#price .box h3 {
     color: var(--accent-dark);
+    font-weight: bold;
+    font-size: 2rem;
 }
-#price .box p {
+#price .box p:first-of-type {
     font-size: 3rem;
     font-weight: bold;
 }
@@ -604,7 +603,7 @@ section.fetured-companies .even-column img {
     font-size: 1.2rem;
 }
 #price .box h5 {
-    color: #888;
+    color: rgba(0 0 0 / .8);
 }
 #price .box ul li {
     display: flex;
@@ -626,7 +625,7 @@ section.fetured-companies .even-column img {
 }
 #price .rotate-plan {
     background-color: #FFD43B;
-    font-size: .9rem !important;
+    font-size: .8rem !important;
     position: absolute;
     padding: .2rem 3.5rem;
     top: 30px;
@@ -677,4 +676,72 @@ section.fetured-companies .even-column img {
 }
 .plan-feature p {
     max-width: 200px;
+}
+/* Start Try for Free Section */
+.contact {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+    margin: auto;
+    border-radius: .7rem;
+    -webkit-border-radius: .7rem;
+    -moz-border-radius: .7rem;
+    -ms-border-radius: .7rem;
+    -o-border-radius: .7rem;
+    overflow: hidden;
+}
+#try .contact .right {
+    padding: 2rem;
+}
+#try .contact .right > * {
+    margin-block: 2rem;
+}
+#try .contact .right p {
+    max-width: 495px;
+}
+#try .contact .right .form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+#try .contact .right .form label {
+    display: block;
+    margin-bottom: 1rem;
+}
+#try .contact .right :where(.form) input, select {
+    padding: .5rem;
+    border: 0;
+    border-radius: .7rem;
+    -webkit-border-radius: .7rem;
+    -moz-border-radius: .7rem;
+    -ms-border-radius: .7rem;
+    -o-border-radius: .7rem;
+    width: 100%;
+}
+#try .contact .right .form button {
+    height: 50px;
+    align-self: flex-end;
+    width: fit-content;
+}
+#try .contact .left {
+    background: linear-gradient(to right bottom, rgba(235, 151, 78, .35), rgba(230, 125, 34, .35)),url(./images/eating.jpg);
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+}
+@media(max-width: 60em) {
+    #try .contact {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    #try .contact .left {
+        grid-row: 1;
+    }
+    #try .contact .form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
 }
