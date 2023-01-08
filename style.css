@@ -1,8 +1,8 @@
 /* General Styles */
 :root {
-    --accent-dark: #6200EE;
-    --accent-light: #b388ee;
-    --accent-lighter: #FDF2E9;
+    --accent-dark: #018786;
+    --accent-light: #14a1a1;
+    --accent-lighter: #C6C1BC;
     --light: white;
 }
 *,
@@ -206,7 +206,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem
+    gap: 2rem;
 }
 main .main-content {
     display: flex;
@@ -284,6 +284,7 @@ main .main-photo .img {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 main .main-photo img {
     width: 100%;
@@ -522,7 +523,8 @@ section.fetured-companies .even-column img {
     max-width: 190px;
 }
 .tes-container .card .tes-name {
-    color: #6e6c6c;
+    color: var(--accent-dark);
+    font-weight: bold;
 }
 #testimonial .right .gallery {
     display: grid;
@@ -702,7 +704,7 @@ section.fetured-companies .even-column img {
 }
 #try .contact .right .form {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 3rem;
 }
 #try .contact .right .form label {
@@ -744,4 +746,48 @@ section.fetured-companies .even-column img {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
+}
+/* Here we will end the upper sections and start with the footer section */
+/* Start Footer */
+footer {
+    padding: clamp(2rem, 4.5vw, 5rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    border-top: 1px solid #DDD;
+}
+footer figure {
+    width: 9rem;
+    height: auto;
+}
+footer figure img {
+    width: 100%;
+    height: 100%;
+}
+footer .socials {
+    display: flex;
+    gap: 1rem;
+}
+footer svg {
+    width: 25px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: fill .3s;
+    -webkit-transition: fill .3s;
+    -moz-transition: fill .3s;
+    -ms-transition: fill .3s;
+    -o-transition: fill .3s;
+}
+footer svg:hover {
+    fill: var(--accent-dark);
+}
+footer .adress {
+    max-width: 200px;
+    font-weight: 600;
+}
+footer .footer-nav ul li {
+    margin-top: 1rem;
+}
+footer section > * {
+    margin-top: 1rem;
 }
