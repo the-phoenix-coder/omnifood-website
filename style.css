@@ -521,6 +521,7 @@ section.fetured-companies .even-column img {
     margin-block: 1rem;
     line-height: 2rem;
     max-width: 190px;
+    font-weight: 600;
 }
 .tes-container .card .tes-name {
     color: var(--accent-dark);
